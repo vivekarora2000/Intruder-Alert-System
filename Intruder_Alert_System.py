@@ -10,14 +10,14 @@ def alarm():
     playsound("/home/vivek/file.mp3")
    
 def call_owner():
-    account_sid = 'ACcab5297d792518fd02fd69e3f11f538f'
-    auth_token = '2703e1bc5f8851d7d241cfa1d7f9e858'
+    account_sid = '*******************************'
+    auth_token = '********************************'
     client = Client(account_sid, auth_token)
 
     call = client.calls.create(
                             twiml='<Response><Say voice="Man">ALERT</Say><Pause length="1"/><Say voice="Man">ALERT</Say><Pause length="1"/><Say voice="Man">ALERT</Say><Say voice="Man">Someone has breached the perimeter</Say><Pause length="1"/><Say voice="Man">Someone has breached the perimeter</Say></Response>',
-                            to='+919381404759',
-                            from_='+13172862035'
+                            to='+91 **********',
+                            from_='+1********'
                         )
 
     print(call.sid)
